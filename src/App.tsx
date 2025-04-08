@@ -1,6 +1,6 @@
 
 import './App.css'
-import Header from "./assets/layout/Header.tsx";
+import {Header} from "./layout/header/Header.tsx";
 
 function App() {
 
