@@ -8,9 +8,7 @@ export const Header = () => {
     <StyledHeader>
       <Logo/>
       <Menu/>
-
       <SocialList/>
-
     </StyledHeader>
   );
 };

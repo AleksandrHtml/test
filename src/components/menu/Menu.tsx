@@ -18,4 +18,3 @@ const StyledMenu = styled.nav`
       gap: 20px;
   }
 `
-
