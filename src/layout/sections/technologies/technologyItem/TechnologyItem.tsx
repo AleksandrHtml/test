@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Theme} from "../../../../components/styles/Theme.ts";
 
 type TechnologyItemPropsType = {
   itemName: string
@@ -10,24 +11,30 @@ export const TechnologyItem = (props: TechnologyItemPropsType) => {
     <StyledItem>
       <ItemName>{props.itemName}</ItemName>
       <ItemBarBox>
-        <ItemProgres progress = {props.progress}></ItemProgres>
+        <ItemProgres progress={props.progress}></ItemProgres>
       </ItemBarBox>
     </StyledItem>
   );
 };
 
 const StyledItem = styled.div`
-  width: 900px;
+    width: 900px;
 `
 const ItemName = styled.span`
+    font-weight: 600;
+    font-size: 24px;
+    
+    @media ${Theme.media.tablet} {
+        font-size: 22px;
+    }
 `
 const ItemBarBox = styled.div`
-  width: 100%;
+    width: 100%;
     height: 18px;
     background: #162950;
     border-radius: 83px;
 `
-const ItemProgres = styled.div<{progress: number}>`
+const ItemProgres = styled.div<{ progress: number }>`
     border-radius: 83px;
     width: ${props => (props.progress !== undefined ? `${props.progress}%` : "100%")};
     height: 18px;

@@ -1,3 +1,4 @@
+import styled from "styled-components";
 
 type ContactsPropsType = {
   title: string
@@ -7,10 +8,25 @@ type ContactsPropsType = {
 
 export const Contact = (props: ContactsPropsType) => {
   return (
-    <div>
-      <span>{props.title}</span>
-      <a href={props.href}>{props.contactInfo}</a>
-    </div>
+    <StyledContact>
+      <ContactText>{props.title}</ContactText>
+      <ContactRefernce href={props.href}>{props.contactInfo}</ContactRefernce>
+    </StyledContact>
   );
 };
+
+const StyledContact = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 22px;
+`
+
+const ContactText = styled.span`
+
+`
+
+const ContactRefernce = styled.a`
+  color: inherit;
+`
 
