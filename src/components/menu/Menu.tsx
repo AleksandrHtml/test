@@ -9,7 +9,7 @@ export const Menu = (props: {menuItems: Array<{ title: string; href: string }>})
 
         {props.menuItems.map((item, index) => {
           return <li key={index}>
-            <ListLink to={item.href} smooth={true}>{item.title}</ListLink>
+            <ListLink href='#' to={item.href} smooth={true}>{item.title}</ListLink>
           </li>;
         })}
 
@@ -38,6 +38,7 @@ const ListLink = styled(Link)`
     font-weight: 500;
     font-size: 16px;
     color: ${Theme.colors.font};
+    cursor: pointer;
 
     &:hover {
         color: ${Theme.colors.accentHover};

@@ -29,7 +29,9 @@ const social = [
 
 export const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = React.useState(false);
-  const onBurgerClick = () => {setMenuIsOpen(!menuIsOpen);};
+  const onBurgerClick = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
 
   return (
     <StyledHeader>
@@ -76,9 +78,9 @@ const StyledMenuBlock = styled.div<{ isOpen: boolean }>`
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        
+
         ${props => props.isOpen && css<{ isOpen: boolean }>`
-          display: flex;
+            display: flex;
         `}
 
     }
@@ -115,9 +117,9 @@ const CloseButton = styled.button<{ isOpen: boolean }>`
                 top: -10px;
 
                 ${props => props.isOpen && css<{ isOpen: boolean }>`
-                transform: rotate(-45deg);
+                    transform: rotate(-45deg);
                     top: 0;
-            `}
+                `}
             }
 
             &::after {
@@ -130,9 +132,9 @@ const CloseButton = styled.button<{ isOpen: boolean }>`
                 top: 10px;
 
                 ${props => props.isOpen && css<{ isOpen: boolean }>`
-                transform: rotate(45deg);
+                    transform: rotate(45deg);
                     top: 0;
-            `}
+                `}
             }
         }
 
